@@ -11,3 +11,44 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "Frau";
+  src: local("Frau"),
+    url("./assets/fonts/fraunces/static/Fraunces_144pt-Black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "BarReg";
+  src: local("Bar"),
+    url("./assets/fonts/barlow/Barlow-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "BarBold";
+  src: local("BarBold"),
+  url("./assets/fonts/barlow/Barlow-Bold.ttf") format("truetype");
+
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+input{
+  box-sizing: border-box;
+}
+
+img{
+  box-sizing: border-box;
+}
