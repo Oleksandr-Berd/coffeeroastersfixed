@@ -5,7 +5,7 @@ import BurgerMenu from "../../components/BurgerMenu/BurgerMenu";
 
 const Header:React.FC = () => {
     return ( <SC.HeaderStyled>
-        <Logo/>
+        <Logo location="header"/>
         <BurgerMenu/>
     </SC.HeaderStyled> );
 }
