@@ -1,4 +1,4 @@
-import {products} from '../../utils/products'
+import {products} from '../../db/products'
 import CollectionItem from './CollectionItem';
 
 const CollectionList:React.FC = () => {

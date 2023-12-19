@@ -1,16 +1,20 @@
-type Props = {
-    id:number,
-    img:string,
-    name: string,
-    description:string,
-}
+import * as SC from './CollectionStyled'
 
-const CollectionItem:React.FC<Props> = ({id, img, name, description}) => {
-    return ( <li key={id}>
-        <img src={img} alt={name} />
-        <h4>{name}</h4>
-        <p>{description}</p>
-    </li> );
-}
- 
+type Props = {
+  id: number;
+  img: string;
+  name: string;
+  description: string;
+};
+
+const CollectionItem: React.FC<Props> = ({ id, img, name, description }) => {
+  return (
+    <SC.Item key={id}>
+      <SC.Image src={img} alt={name} />
+      <SC.SubTitle>{name}</SC.SubTitle>
+      <SC.Body>{description}</SC.Body>
+    </SC.Item>
+  );
+};
+
 export default CollectionItem;
