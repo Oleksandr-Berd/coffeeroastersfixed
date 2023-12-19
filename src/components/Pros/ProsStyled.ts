@@ -1,8 +1,6 @@
 import styled from "@emotion/styled";
 
 export const CommonCon = styled.div`
-
-
 text-align: center;
 
 color: #fefcf7;
@@ -47,7 +45,9 @@ line-height: 1.67;
 `
 
 export const ProsList = styled.ul`
-position: absolute;
+/* position: relative; */
+
+
 
 padding-left: 24px;
 padding-right: 24px;
