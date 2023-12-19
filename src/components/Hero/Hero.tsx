@@ -2,6 +2,7 @@
 import * as SC from "./HeroStyled";
 
 import heroBgMob from "../../assets/img/home/mobile/image-hero-coffeepress.jpg";
+import PlanLink from "../../ui/PlanLink/PlanLink";
 
 const Hero: React.FC = () => {
   return (
@@ -12,7 +13,7 @@ const Hero: React.FC = () => {
         curated artisan coffees from our best roasters delivered directly to
         your door, at your schedule.
       </SC.Body>
-      <SC.LinkButton to="/plan">Create your plan</SC.LinkButton>
+      <PlanLink/>
     </SC.HeroCon>
   );
 };
