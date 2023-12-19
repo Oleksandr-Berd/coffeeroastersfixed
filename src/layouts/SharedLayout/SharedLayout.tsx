@@ -4,6 +4,7 @@ import { DNA } from "react-loader-spinner";
 
 import * as SC from "./SharedLayoutStyled"
 import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 
 type Props = {
     children:React.ReactNode
@@ -21,6 +22,7 @@ const SharedLayout:React.FC<Props> = ({children}) => {
           />}>
             <Header/>
         {children}
+        <Footer/>
         </Suspense>
     </SC.SharedLayoutStyled> );
 }
