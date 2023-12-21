@@ -1,6 +1,8 @@
+import AboutUs from "../../components/AboutUs/AboutUs";
+
 const AboutUsPage:React.FC = () => {
     return ( <div>
-        <AboutUsPage/>
+        <AboutUs/>
     </div> );
 }
  
