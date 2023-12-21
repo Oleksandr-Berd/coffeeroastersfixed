@@ -1,11 +1,14 @@
 import * as SC from "./BurgerMenuStyled";
 
 import { ReactComponent as BurgerMobSvg } from "../../assets/img/shared/mobile/icon-hamburger.svg";
+import {ReactComponent as CloseMenuSvg} from '../../assets/img/shared/mobile/icon-close.svg'
 
-const BurgerMenu: React.FC = () => {
+import { HeaderType } from "../../utils/types/types";
+
+const BurgerMenu: React.FC<HeaderType> = ({isMenu, toggleMenu}) => {
   return (
-    <SC.BurgerButton>
-      <BurgerMobSvg />
+    <SC.BurgerButton onClick={toggleMenu}>
+      {isMenu ? <CloseMenuSvg/> : <BurgerMobSvg/>}
     </SC.BurgerButton>
   );
 };

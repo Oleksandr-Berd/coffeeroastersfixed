@@ -1,17 +1,24 @@
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 import { DNA } from "react-loader-spinner";
 
 
 import * as SC from "./SharedLayoutStyled"
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
+import NavMenu from "../../components/NavMenu/NavMenu";
 
 type Props = {
     children:React.ReactNode
 }
 
 const SharedLayout:React.FC<Props> = ({children}) => {
-    return ( <SC.SharedLayoutStyled>
+const [isMenu, setIsMenu] = useState(false)
+
+const toggleMenu = ():void =>{
+    setIsMenu(!isMenu)
+}
+
+    return ( <SC.SharedLayoutStyled isMenu={isMenu ? "true" : "false"}>
         <Suspense fallback={<DNA
             visible={true}
             height="80"
@@ -20,7 +27,9 @@ const SharedLayout:React.FC<Props> = ({children}) => {
             wrapperStyle={{}}
             wrapperClass="dna-wrapper"
           />}>
-            <Header/>
+            <Header isMenu={isMenu} toggleMenu={toggleMenu}/>
+        {isMenu ? <NavMenu/> : null}
+
         {children}
         <Footer/>
         </Suspense>
