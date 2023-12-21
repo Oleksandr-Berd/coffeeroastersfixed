@@ -6,6 +6,9 @@ name:string,
 }
 
 const NavItem:React.FC<Props> = ({path, name}) => {
+
+
+    
     return ( <li>
         <NavLink to={path}>{name}</NavLink>
     </li> );

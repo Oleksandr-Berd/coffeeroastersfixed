@@ -28,7 +28,7 @@ const toggleMenu = ():void =>{
             wrapperClass="dna-wrapper"
           />}>
             <Header isMenu={isMenu} toggleMenu={toggleMenu}/>
-        {isMenu ? <NavMenu/> : null}
+        {isMenu ? <NavMenu toggleMenu={toggleMenu}/> : null}
 
         {children}
         <Footer/>
