@@ -8,6 +8,8 @@ export const CommonCon = styled.div`
   padding-left: 24px;
   padding-right: 24px;
 
+  margin-bottom: 120px;
+
   text-align: center;
 
   background-color: #2c343e;

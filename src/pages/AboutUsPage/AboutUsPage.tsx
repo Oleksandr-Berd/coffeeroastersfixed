@@ -1,5 +1,6 @@
 import AboutUs from "../../components/AboutUs/AboutUs";
 import Commitment from "../../components/Commitment/Commitment";
+import Headquarters from "../../components/HeadQuarters/Headquarters";
 import Quality from "../../components/Quality/Quality";
 
 const AboutUsPage:React.FC = () => {
@@ -7,6 +8,7 @@ const AboutUsPage:React.FC = () => {
         <AboutUs/>
         <Commitment/>
         <Quality/>
+        <Headquarters/>
     </div> );
 }
  
