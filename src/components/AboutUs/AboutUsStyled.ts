@@ -31,6 +31,9 @@ color: #fefcf7;
 export const Body = styled.p`
 width: 259px;
 
+margin-left: auto;
+margin-right: auto;
+
 font-family: "Bar";
 font-size: 15px;
 line-height: 1.67;
