@@ -5,13 +5,13 @@ import bg from '../../assets/img/about/mobile/image-hero-whitecup.jpg'
 const AboutUs: React.FC = () => {
   return (
     <SC.CommonCon bg={bg}>
-      <h2>About Us</h2>
-      <p>
+      <SC.Title>About Us</SC.Title>
+      <SC.Body>
         Coffeeroasters began its journey of exotic discovery in 1999,
         highlighting stories of coffee from around the world. We have since been
         dedicated to bring the perfect cup - from bean to brew - in every
         shipment.
-      </p>
+      </SC.Body>
     </SC.CommonCon>
   );
 };
