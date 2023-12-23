@@ -21,12 +21,12 @@ const OrderItem: React.FC<OrderProps> = ({
 
     handleOrder(name, title);
   };
-  const handleActive = (title:string) => {
-    // const activeOptionsSet = setkeyName(name)
+  const handleActive = (title:string, name:OrderQuestion) => {
+    const activeOptionsSet = setkeyName(name)
     const chosenOption = Object.entries(orderSummary).find(el => el.includes(title))
 
 
-if (chosenOption && chosenOption[1] === title){
+if (chosenOption && chosenOption[1] === title && chosenOption[0] === activeOptionsSet){
     return "active";
 
 }    
@@ -50,7 +50,7 @@ if (chosenOption && chosenOption[1] === title){
             <SC.OptionsItem
               key={title}
               onClick={() => handleOption(name, title)}
-              status={handleActive(title)}
+              status={handleActive(title, name)}
             >
               <SC.OptionsItemTitle>{title}</SC.OptionsItemTitle>
               <SC.OptionsItemBody>{body}</SC.OptionsItemBody>

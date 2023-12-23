@@ -5,6 +5,7 @@ import Order from "../../components/Order/Order";
 import PlanHero from "../../components/PlanHero/PlanHero";
 import { OrderQuestion, OrderSummary } from "../../utils/types/types";
 import { setkeyName } from "../../utils/helpers";
+import Summary from "../../components/Summary/Summary";
 
 
 
@@ -13,7 +14,7 @@ const PlanPage: React.FC = () => {
     drinkWay: "Filter",
     coffeeType: "Decaf",
     coffeeVolume: "250g",
-    grindWay: "Wholeeban",
+    grindWay: "Wholebean",
     frequency: "Every week",
   });
 
@@ -31,6 +32,7 @@ const PlanPage: React.FC = () => {
       <PlanHero />
       <Manual />
       <Order handleOrder={handleOrder} orderSummary={orderSummary}/>
+      <Summary orderSummary={orderSummary}/>
     </div>
   );
 };
