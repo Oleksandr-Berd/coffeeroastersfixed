@@ -4,6 +4,7 @@ import Manual from "../../components/Manual/Manual";
 import Order from "../../components/Order/Order";
 import PlanHero from "../../components/PlanHero/PlanHero";
 import { OrderQuestion, OrderSummary } from "../../utils/types/types";
+import { setkeyName } from "../../utils/helpers";
 
 
 
@@ -17,17 +18,7 @@ const PlanPage: React.FC = () => {
   });
 
   const handleOrder = (name: OrderQuestion, title: string): void => {
-    const setkeyName = (name: OrderQuestion) => {
-      const keyName = {
-        "How do you drink your coffee?": "drinkWay",
-        "What type of coffee?": "coffeeType",
-        "How much would you like?": "coffeeVolume",
-        "Want us to grind them?": "grindWay",
-        "How often should we deliver?": "frequency",
-      };
-
-      return keyName[name];
-    };
+    
 
     setOrderSummary((prevOrderSummary) => ({
       ...prevOrderSummary,
@@ -39,7 +30,7 @@ const PlanPage: React.FC = () => {
     <div>
       <PlanHero />
       <Manual />
-      <Order handleOrder={handleOrder} />
+      <Order handleOrder={handleOrder} orderSummary={orderSummary}/>
     </div>
   );
 };

@@ -4,6 +4,10 @@ type StyleProps = {
     isOptions:boolean;
 }
 
+type ActiveProps = {
+    status: any
+}
+
 export const CommonList = styled.ul`
 margin-bottom: 120px;
 `
@@ -43,13 +47,14 @@ line-height: 1.17;
 color: #83888f;
 `
 
-export const OptionsItem = styled.li`
+export const OptionsItem = styled.li<ActiveProps>`
 padding-top: 24px;
 padding-bottom: 24px;
 padding-left: 25px;
 padding-right: 25px;
 
-background-color: #f4f1eb;
+background-color: ${props => props.status === "active" ? "#0e8784" : "#f4f1eb"} ;
+color:${props => props.status === "active" ? "#f4f1eb" : "#333d4b"};
 
 border-radius: 8px;
 
@@ -65,7 +70,6 @@ font-family: "Frau";
 font-size: 24px;
 line-height: 1.33;
 
-color: #333d4b;
 `
 
 export const OptionsItemBody = styled.p`
@@ -74,6 +78,4 @@ width: 240px;
 font-family: "Bar";
 font-size: 16px;
 line-height: 1.63;
-
-color: #333d4b;
 `
