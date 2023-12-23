@@ -4,9 +4,10 @@ import { OrderSummary } from "../../utils/types/types";
 
 type Props = {
   orderSummary: OrderSummary;
+  toggleModalSummary:()=>void;
 };
 
-const Summary: React.FC<Props> = ({ orderSummary }) => {
+const Summary: React.FC<Props> = ({ orderSummary, toggleModalSummary }) => {
 
 const {drinkWay, coffeeType, coffeeVolume, grindWay, frequency} = orderSummary
 
@@ -20,7 +21,7 @@ const {drinkWay, coffeeType, coffeeVolume, grindWay, frequency} = orderSummary
           ."
         </SC.Body>
       </SC.SummaryCon>
-      <SC.SubmitOrderBtn>Create my plan!</SC.SubmitOrderBtn>
+      <SC.SubmitOrderBtn onClick={toggleModalSummary}>Create my plan!</SC.SubmitOrderBtn>
     </SC.CommonCon>
   );
 };

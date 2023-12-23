@@ -16,6 +16,7 @@ background-color: #2c343e;
 color: #fefcf7;
 
 border-radius: 10px;
+
 `
 
 export const Item = styled.li`

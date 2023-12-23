@@ -5,11 +5,16 @@ import Order from "../../components/Order/Order";
 import PlanHero from "../../components/PlanHero/PlanHero";
 import { OrderQuestion, OrderSummary } from "../../utils/types/types";
 import { setkeyName } from "../../utils/helpers";
+import * as SC from './PlanPageStyled'
+
 import Summary from "../../components/Summary/Summary";
+import ModalSummary from "../../components/ModalSummary/ModalSummary";
 
+type Props ={
+    toggleModalSummary:()=>void;
+}
 
-
-const PlanPage: React.FC = () => {
+const PlanPage: React.FC<Props> = ({toggleModalSummary}) => {
   const [orderSummary, setOrderSummary] = useState<OrderSummary>({
     drinkWay: "Filter",
     coffeeType: "Decaf",
@@ -27,13 +32,15 @@ const PlanPage: React.FC = () => {
     }));
   };
   
+
+
   return (
-    <div>
+    <SC.PlanPageStyled >
       <PlanHero />
       <Manual />
       <Order handleOrder={handleOrder} orderSummary={orderSummary}/>
-      <Summary orderSummary={orderSummary}/>
-    </div>
+      <Summary orderSummary={orderSummary} toggleModalSummary = {toggleModalSummary}/>
+    </SC.PlanPageStyled>
   );
 };
 
