@@ -8,29 +8,15 @@ import { setkeyName } from "../../utils/helpers";
 import * as SC from './PlanPageStyled'
 
 import Summary from "../../components/Summary/Summary";
-import ModalSummary from "../../components/ModalSummary/ModalSummary";
 
 type Props ={
     toggleModalSummary:()=>void;
+    orderSummary:OrderSummary;
+    handleOrder:(name: OrderQuestion, title: string) => void 
 }
 
-const PlanPage: React.FC<Props> = ({toggleModalSummary}) => {
-  const [orderSummary, setOrderSummary] = useState<OrderSummary>({
-    drinkWay: "Filter",
-    coffeeType: "Decaf",
-    coffeeVolume: "250g",
-    grindWay: "Wholebean",
-    frequency: "Every week",
-  });
-
-  const handleOrder = (name: OrderQuestion, title: string): void => {
-    
-
-    setOrderSummary((prevOrderSummary) => ({
-      ...prevOrderSummary,
-      [setkeyName(name)]: title,
-    }));
-  };
+const PlanPage: React.FC<Props> = ({toggleModalSummary, orderSummary, handleOrder}) => {
+  
   
 
 

@@ -7,15 +7,18 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import NavMenu from "../../components/NavMenu/NavMenu";
 import ModalSummary from "../../components/ModalSummary/ModalSummary";
+import { OrderSummary } from "../../utils/types/types";
 
 type Props = {
     children:React.ReactNode,
     isModalSummary:boolean;
     toggleModalSummary:()=>void;
+    orderSummary:OrderSummary;
 }
 
-const SharedLayout:React.FC<Props> = ({children, isModalSummary , toggleModalSummary}) => {
+const SharedLayout:React.FC<Props> = ({children, isModalSummary , toggleModalSummary, orderSummary}) => {
 const [isMenu, setIsMenu] = useState(false)
+
 
 const toggleMenu = ():void =>{
     setIsMenu(!isMenu)
@@ -32,7 +35,7 @@ const toggleMenu = ():void =>{
           />}>
             <Header isMenu={isMenu} toggleMenu={toggleMenu}/>
         {isMenu ? <NavMenu toggleMenu={toggleMenu}/> : null}
-        {isModalSummary ? <ModalSummary toggleModalSummary={toggleModalSummary}/> : null}
+        {isModalSummary ? <ModalSummary toggleModalSummary={toggleModalSummary} orderSummary={orderSummary}/> : null}
 
         {children}
         <Footer/>
