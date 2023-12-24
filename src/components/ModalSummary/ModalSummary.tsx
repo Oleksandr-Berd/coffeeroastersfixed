@@ -66,25 +66,25 @@ const ModalSummary: React.FC<Props> = ({
   return (
     <SC.SummaryOverlay>
       <SC.OrderSummaryCon>
-        <div>
+        <SC.TitleCon>
           <h2>Order Summary</h2>
-        </div>
-        <div>
-          <p>
+        </SC.TitleCon>
+        <SC.BodyCon>
+          <SC.Order>
             {" "}
             "I drink my coffee as <span>{drinkWay}</span>, with a{" "}
             <span>{coffeeType}</span> type of bean. <span>{coffeeVolume}</span>{" "}
             ground ala <span>{grindWay}</span>, sent to me{" "}
             <span>{frequency}</span>
             ."
-          </p>
-          <p>
+          </SC.Order>
+          <SC.VerifyBody>
             Is this correct? You can proceed to checkout or go back to plan
             selection if something is off. Subscription discount codes can also
             be redeemed at the checkout.{" "}
-          </p>
-          <button onClick={handleCheckout}>Checkout - {priceClaculation(coffeeVolume, frequency)}</button>
-        </div>
+          </SC.VerifyBody>
+          <SC.CheckoutBtn onClick={handleCheckout}>Checkout - {priceClaculation(coffeeVolume, frequency)}</SC.CheckoutBtn>
+        </SC.BodyCon>
       </SC.OrderSummaryCon>
     </SC.SummaryOverlay>
   );

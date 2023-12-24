@@ -5,7 +5,7 @@ type StyleProps = {
 }
 
 export const SharedLayoutStyled = styled.main<StyleProps>` 
-height: ${props => props.isMenu === "true" && "100vh"};
+height: ${props => props.isMenu === "true" && "90vh"};
 
 padding-top: 32px;
 padding-bottom:${props => props.isMenu === "false"? "72px" : "0"};
