@@ -57,11 +57,10 @@ const ModalSummary: React.FC<Props> = ({
         break;
     }
 
-    const adjustedPrice = price + "/" + frequency.split(" ").slice(1).join(" ")
+    const adjustedPrice = price + "/" + frequency.split(" ").slice(1).join(" ");
 
-    return adjustedPrice
+    return adjustedPrice;
   };
-
 
   return (
     <SC.SummaryOverlay>
@@ -72,10 +71,12 @@ const ModalSummary: React.FC<Props> = ({
         <SC.BodyCon>
           <SC.Order>
             {" "}
-            "I drink my coffee as <span>{drinkWay}</span>, with a{" "}
-            <span>{coffeeType}</span> type of bean. <span>{coffeeVolume}</span>{" "}
-            ground ala <span>{grindWay}</span>, sent to me{" "}
-            <span>{frequency}</span>
+            "I drink my coffee {drinkWay === "Capsule" ? "using" : "as"}{" "}
+            <span>{drinkWay}</span>, with a <span>{coffeeType}</span> type of
+            bean. <span>{coffeeVolume}</span>{" "}
+            {drinkWay !== "Capsule" ? `ground ala ` : null}
+            {drinkWay !== "Capsule" ? <span>{grindWay}</span> : null}, sent to
+            me <span>{frequency}</span>
             ."
           </SC.Order>
           <SC.VerifyBody>
@@ -83,7 +84,9 @@ const ModalSummary: React.FC<Props> = ({
             selection if something is off. Subscription discount codes can also
             be redeemed at the checkout.{" "}
           </SC.VerifyBody>
-          <SC.CheckoutBtn onClick={handleCheckout}>Checkout - {priceClaculation(coffeeVolume, frequency)}</SC.CheckoutBtn>
+          <SC.CheckoutBtn onClick={handleCheckout}>
+            Checkout - {priceClaculation(coffeeVolume, frequency)}
+          </SC.CheckoutBtn>
         </SC.BodyCon>
       </SC.OrderSummaryCon>
     </SC.SummaryOverlay>

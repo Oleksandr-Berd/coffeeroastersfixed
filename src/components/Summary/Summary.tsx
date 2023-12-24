@@ -9,15 +9,15 @@ type Props = {
 
 const Summary: React.FC<Props> = ({ orderSummary, toggleModalSummary }) => {
 
-const {drinkWay, coffeeType, coffeeVolume, grindWay, frequency} = orderSummary
+const {drinkWay, coffeeType, coffeeVolume, grindWay, frequency} = orderSummary;
 
   return (
     <SC.CommonCon>
       <SC.SummaryCon>
         <SC.Title>order summary</SC.Title>
         <SC.Body>
-          "I drink my coffee as <span>{drinkWay}</span>, with a <span>{coffeeType}</span> type of
-          bean. <span>{coffeeVolume}</span> ground ala <span>{grindWay}</span>, sent to me <span>{frequency}</span>
+          "I drink my coffee {drinkWay === "Capsule" ? "using" : "as"} <span>{drinkWay}</span>, with a <span>{coffeeType}</span> type of
+          bean. <span>{coffeeVolume}</span> {drinkWay !== "Capsule" ? `ground ala `: null}{drinkWay !== "Capsule" ? <span>{grindWay}</span> : null}, sent to me <span>{frequency}</span>
           ."
         </SC.Body>
       </SC.SummaryCon>

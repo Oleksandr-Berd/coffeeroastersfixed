@@ -35,12 +35,15 @@ if (chosenOption && chosenOption[1] === title && chosenOption[0] === activeOptio
   
   };
   
+// console.log(setkeyName(name));
+
+// console.log(name);
 
   return (
     <SC.Item isOptions={isOptions} key={name}>
-      <SC.TitleCon>
+      <SC.TitleCon onClick={toggleOptions}>
         <SC.Title>{name}</SC.Title>
-        <SC.ToggleBtn onClick={toggleOptions}>
+        <SC.ToggleBtn  disabled={orderSummary.drinkWay === "Capsule" && setkeyName(name) === "grindWay" ? true : false}>
           <img src={arrow} alt="arrow" />
         </SC.ToggleBtn>
       </SC.TitleCon>
