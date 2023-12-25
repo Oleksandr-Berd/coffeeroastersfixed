@@ -13,7 +13,7 @@ const Logo: React.FC<LayoutType> = ({location}) => {
   return (
     <SC.LogoCon location={location}>
       {isTablet ? 
-      <LogoMobSvg width={location === "footer" ? "22.15px" : "24px"} height={location === "footer" ? "22.15px" : "24px"}/>
+      <LogoMobSvg width={"24px"} height={"24px"}/>
       : 
       <LogoMobSvg width={location === "footer" ? "22.15px" : "16.58px"} height={location === "footer" ? "22.15px" : "16.62px"}/>
       }

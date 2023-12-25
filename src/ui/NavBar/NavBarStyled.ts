@@ -24,6 +24,7 @@ export const NavBarStyled = styled.nav<LayoutType>`
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
 
     & >li:not(:last-child) {
       margin-bottom: 0;

@@ -7,6 +7,8 @@ export const LogoCon = styled.div<LayoutType>`
   align-items: center;
   justify-content: ${(props) => props.location === "footer" && "center"};
 
+  
+
   & > p {
     margin-left: 6px;
 
@@ -18,7 +20,7 @@ export const LogoCon = styled.div<LayoutType>`
     @media (min-width: 768px) {
       margin-left: 8px;
 
-      font-size: ${(props) => (props.location === "header" ? "24px" : "22px")};
+      font-size: 24px;
     }
   }
 `;
