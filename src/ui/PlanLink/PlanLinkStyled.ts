@@ -16,4 +16,7 @@ line-height: 1.67;
 color: #fefcf7;
 background-color: #0e8784;
 
-border-radius: 6px;`
+border-radius: 6px;
+
+
+`
