@@ -1,10 +1,16 @@
+import { useMediaQuery } from 'usehooks-ts';
+
 import * as SC from './PlanHeroStyled'
 
-import bg from '../../assets/img/plan/mobile/image-hero-blackcup.jpg'
+import bgMob from '../../assets/img/plan/mobile/image-hero-blackcup.jpg'
+import bgTab from '../../assets/img/plan/tablet/image-hero-blackcup.jpg'
 
 const PlanHero: React.FC = () => {
-  return (
-    <SC.CommonCon bg={bg}>
+  
+  const isTablet = useMediaQuery("(min-width:768px)")
+
+    return (
+    <SC.CommonCon bg={isTablet ? bgTab : bgMob}>
       <SC.Title>Create a plan</SC.Title>
       <SC.Body>
         Build a subscription plan that best fits your needs. We offer an

@@ -33,4 +33,7 @@ export type OrderQuestion =
     handleOrder:(name: OrderQuestion, title:string)=>void,
     orderSummary: OrderSummary
   };
-  
+
+  export type GeometryType = {
+    page:"home" | "plan";
+  }

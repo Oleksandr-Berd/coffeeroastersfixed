@@ -17,7 +17,7 @@ background-color: #2c343e;
         margin-bottom: 34px;
     }
 
-    & > *:nth-child(2){
+    & > *:nth-of-type(2){
         margin-bottom: 65px;
     }
 }
