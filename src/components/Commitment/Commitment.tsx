@@ -1,11 +1,18 @@
+import { useMediaQuery } from "usehooks-ts";
+
 import * as SC from "./CommitmentStyled";
 
-import imgCom from "../../assets/img/about/mobile/image-commitment.jpg";
+import imgComMob from "../../assets/img/about/mobile/image-commitment.jpg";
+import imgComTab from '../../assets/img/about/tablet/image-commitment.jpg'
 
 const Commitment: React.FC = () => {
+
+const isTablet = useMediaQuery("(min-width:768px)")
+
   return (
     <SC.CommonCon>
-      <img src={imgCom} alt="commitment" />
+      <img src={isTablet ? imgComTab : imgComMob} alt="commitment" />
+      <div>
       <SC.Title>Our commitment</SC.Title>
       <SC.Body>
         We’re built on a simple mission and a commitment to doing good along the
@@ -20,6 +27,7 @@ const Commitment: React.FC = () => {
         to highlight tasting profiles distinctive to their native growing
         region.
       </SC.Body>
+      </div>
     </SC.CommonCon>
   );
 };
