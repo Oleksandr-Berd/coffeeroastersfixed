@@ -1,11 +1,18 @@
+import { useMediaQuery } from 'usehooks-ts';
+
 import * as SC from './QualityStyled'
 
-import imgQuality from '../../assets/img/about/mobile/image-quality.jpg'
+import imgQualityMob from '../../assets/img/about/mobile/image-quality.jpg'
+import imgQualityTab from '../../assets/img/about/tablet/image-quality.jpg'
+
 
 const Quality:React.FC = () => {
+
+const isTablet = useMediaQuery("(min-width:768px)")
+
   return (
     <SC.CommonCon>
-      <img src={imgQuality} alt="quality" />
+      <img src={isTablet ? imgQualityTab : imgQualityMob} alt="quality" />
       <SC.Title>Uncompromising quality</SC.Title>
       <SC.Body>
         Although we work with growers who pay close attention to all stages of
