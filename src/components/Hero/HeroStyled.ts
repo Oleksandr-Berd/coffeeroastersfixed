@@ -25,7 +25,7 @@ export const HeroCon = styled.div<StyleProp>`
     padding-bottom: 104px;
     padding-left: 58px;
 
-    margin-bottom: 144px;
+    margin-bottom: 203px;
 
     text-align: left;
   }
