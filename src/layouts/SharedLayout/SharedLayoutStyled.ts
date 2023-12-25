@@ -15,5 +15,11 @@ padding-right: 24px;
 background-color: #FEFCF7;
 
 overflow: hidden;
+
+@media (min-width: 768px){
+    padding-top: 40px;
+    padding-left: 39px;
+    padding-right: 40px;
+}
 `
 

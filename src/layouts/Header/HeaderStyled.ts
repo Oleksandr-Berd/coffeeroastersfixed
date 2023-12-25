@@ -7,4 +7,8 @@ align-items: center;
 justify-content: space-between;
 
 padding-bottom: 40px;
+
+@media (min-width: 768px){
+    padding-bottom: 53px;
+}
 `

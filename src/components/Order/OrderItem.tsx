@@ -18,32 +18,37 @@ const OrderItem: React.FC<OrderProps> = ({
   };
 
   const handleOption = (name: OrderQuestion, title: string) => {
-
     handleOrder(name, title);
   };
-  const handleActive = (title:string, name:OrderQuestion) => {
-    const activeOptionsSet = setkeyName(name)
-    const chosenOption = Object.entries(orderSummary).find(el => el.includes(title))
+  const handleActive = (title: string, name: OrderQuestion) => {
+    const activeOptionsSet = setkeyName(name);
+    const chosenOption = Object.entries(orderSummary).find((el) =>
+      el.includes(title)
+    );
 
+    if (
+      chosenOption &&
+      chosenOption[1] === title &&
+      chosenOption[0] === activeOptionsSet
+    ) {
+      return "active";
+    }
 
-if (chosenOption && chosenOption[1] === title && chosenOption[0] === activeOptionsSet){
-    return "active";
-
-}    
-    
-    return
-  
+    return;
   };
-  
-// console.log(setkeyName(name));
-
-// console.log(name);
 
   return (
     <SC.Item isOptions={isOptions} key={name}>
       <SC.TitleCon onClick={toggleOptions}>
         <SC.Title>{name}</SC.Title>
-        <SC.ToggleBtn  disabled={orderSummary.drinkWay === "Capsule" && setkeyName(name) === "grindWay" ? true : false}>
+        <SC.ToggleBtn
+          disabled={
+            orderSummary.drinkWay === "Capsule" &&
+            setkeyName(name) === "grindWay"
+              ? true
+              : false
+          }
+        >
           <img src={arrow} alt="arrow" />
         </SC.ToggleBtn>
       </SC.TitleCon>

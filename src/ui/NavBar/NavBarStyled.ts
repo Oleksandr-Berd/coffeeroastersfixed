@@ -19,4 +19,21 @@ export const NavBarStyled = styled.nav<LayoutType>`
 
     color: ${(props) => (props.location === "footer" ? "#83888f" : "#333d4b")};
   }
+
+  @media (min-width: 768px){
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    & >li:not(:last-child) {
+      margin-bottom: 0;
+      margin-right: 33px;
+    }
+
+    & a{
+      font-size: 15px;
+      line-height: 1.25;
+      letter-spacing: 1px;
+    }
+  }
 `;
