@@ -1,10 +1,16 @@
+import { useMediaQuery } from 'usehooks-ts';
+
 import * as SC from './AboutUsStyled'
 
-import bg from '../../assets/img/about/mobile/image-hero-whitecup.jpg'
+import bgMob from '../../assets/img/about/mobile/image-hero-whitecup.jpg'
+import bgTab from '../../assets/img/about/tablet/image-hero-whitecup.jpg'
 
 const AboutUs: React.FC = () => {
+
+  const isTablet = useMediaQuery("(min-width:768px)")
+
   return (
-    <SC.CommonCon bg={bg}>
+    <SC.CommonCon bg={isTablet ? bgTab : bgMob}>
       <SC.Title>About Us</SC.Title>
       <SC.Body>
         Coffeeroasters began its journey of exotic discovery in 1999,
