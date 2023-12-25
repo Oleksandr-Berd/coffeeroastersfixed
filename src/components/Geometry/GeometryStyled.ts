@@ -19,7 +19,7 @@ export const Circle = styled.div<GeometryType>`
 
   z-index: ${props => props.page === "home" ? "2" : "0" };
 
-  background-color: #fefcf7;
+  background-color: ${props => props.page ==="home" ? "#fefcf7" : "transparent"};
   border: 2px solid #0e8784;
 
   border-radius: 50%;

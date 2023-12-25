@@ -4,6 +4,7 @@ export const CommonCon = styled.div`
 margin-bottom: 120px;
 
 text-align: center;
+
 `
 
 export const SummaryCon = styled.div`
@@ -17,6 +18,9 @@ margin-bottom: 56px;
 text-align: left;
 
 background-color: #2c343e;
+
+border-radius: 10px;
+
 `
 
 export const Title = styled.h2`
