@@ -34,7 +34,7 @@ export const Line = styled.div`
   top: 0;
   left: 0;
 
-  transform: translateX(15px) translateY(15px);
+  transform: translateX(21px) translateY(17px);
 
   width: 467px;
   height: 2px;

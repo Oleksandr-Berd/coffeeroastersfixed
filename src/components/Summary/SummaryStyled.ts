@@ -5,6 +5,9 @@ margin-bottom: 120px;
 
 text-align: center;
 
+@media (min-width: 768px){
+    margin-bottom: 144px;
+}
 `
 
 export const SummaryCon = styled.div`
@@ -21,6 +24,14 @@ background-color: #2c343e;
 
 border-radius: 10px;
 
+@media (min-width: 768px){
+    padding-top: 27px;
+    padding-bottom: 27px;
+    padding-left: 44px;
+    padding-right: 43px;
+
+    margin-bottom: 40px;
+}
 `
 
 export const Title = styled.h2`
@@ -39,10 +50,14 @@ export const Body = styled.p`
 font-family: "Frau";
 font-size: 24px;
 line-height: 1.67;
+
 color: #fefcf7;
 
 & > span{
     color:#0e8784;
+}
+
+@media (min-width: 768px){
 }
 `
 

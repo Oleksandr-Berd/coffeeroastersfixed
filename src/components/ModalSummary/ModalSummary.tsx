@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { useMediaQuery } from "usehooks-ts";
 
 import * as SC from "./ModalSummaryStyled";
 import { OrderSummary } from "../../utils/types/types";
@@ -18,6 +19,8 @@ const ModalSummary: React.FC<Props> = ({
     toggleModalSummary();
     navigate("/");
   };
+
+  const isTablet = useMediaQuery("(min-width:768px)");
 
   const { drinkWay, coffeeType, coffeeVolume, grindWay, frequency } =
     orderSummary;
@@ -84,9 +87,18 @@ const ModalSummary: React.FC<Props> = ({
             selection if something is off. Subscription discount codes can also
             be redeemed at the checkout.{" "}
           </SC.VerifyBody>
-          <SC.CheckoutBtn onClick={handleCheckout}>
-            Checkout - {priceClaculation(coffeeVolume, frequency)}
-          </SC.CheckoutBtn>
+          {isTablet ? (
+            <SC.CheckoutCon>
+            <p>{priceClaculation(coffeeVolume, frequency)}</p>
+            <SC.CheckoutBtn onClick={handleCheckout}>
+              Checkout 
+            </SC.CheckoutBtn>
+            </SC.CheckoutCon>
+          ) : (
+            <SC.CheckoutBtn onClick={handleCheckout}>
+              Checkout - {priceClaculation(coffeeVolume, frequency)}
+            </SC.CheckoutBtn>
+          )}
         </SC.BodyCon>
       </SC.OrderSummaryCon>
     </SC.SummaryOverlay>
