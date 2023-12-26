@@ -11,11 +11,11 @@ const PlanPage = lazy(() => import("./pages/PlanPage/PlanPage"));
 const App: React.FC = () => {
   const [isModalSummary, setIsModalSumamy] = useState<boolean>(false)
   const [orderSummary, setOrderSummary] = useState<OrderSummary>({
-    drinkWay: "Filter",
-    coffeeType: "Decaf",
-    coffeeVolume: "250g",
-    grindWay: "Wholebean",
-    frequency: "Every week",
+    drinkWay: "_______",
+    coffeeType: "_______",
+    coffeeVolume: "_______",
+    grindWay: "_______",
+    frequency: "_______",
   });
 
   const handleOrder = (name: OrderQuestion, title: string): void => {

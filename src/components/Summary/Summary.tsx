@@ -11,6 +11,12 @@ const Summary: React.FC<Props> = ({ orderSummary, toggleModalSummary }) => {
 
 const {drinkWay, coffeeType, coffeeVolume, grindWay, frequency} = orderSummary;
 
+const handleDisable = () => {
+  const isDisabled = Object.values(orderSummary).includes("_______") && orderSummary.drinkWay !== "Capsule"
+
+  return isDisabled
+}
+
   return (
     <SC.CommonCon>
       <SC.SummaryCon>
@@ -21,7 +27,7 @@ const {drinkWay, coffeeType, coffeeVolume, grindWay, frequency} = orderSummary;
           ."
         </SC.Body>
       </SC.SummaryCon>
-      <SC.SubmitOrderBtn onClick={toggleModalSummary}>Create my plan!</SC.SubmitOrderBtn>
+      <SC.SubmitOrderBtn onClick={toggleModalSummary} disabled={handleDisable()} status={handleDisable()}>Create my plan!</SC.SubmitOrderBtn>
     </SC.CommonCon>
   );
 };

@@ -108,9 +108,7 @@ export const OptionsItem = styled.li<ActiveProps>`
   @media (min-width: 1440px) {
     transition: all 0.3s linear;
 
-    &:hover,
-    &:focus,
-    &:active {
+    &:hover {
       background-color: #fdd6ba;
       color: #333d4b;
       cursor: pointer;

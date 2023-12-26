@@ -1,5 +1,9 @@
 import styled from "@emotion/styled";
 
+type StyleProps = {
+    status:boolean,
+}
+
 export const CommonCon = styled.div`
   margin-bottom: 120px;
 
@@ -76,7 +80,7 @@ export const Body = styled.p`
 
 `;
 
-export const SubmitOrderBtn = styled.button`
+export const SubmitOrderBtn = styled.button<StyleProps>`
   display: inline-block;
 
   padding-top: 15px;
@@ -88,7 +92,7 @@ export const SubmitOrderBtn = styled.button`
   font-size: 18px;
   line-height: 1.39;
 
-  background-color: #0e8784;
+  background-color:${props => props.status ? "#e2dedb" : " #0e8784"};
   color: #fefcf7;
 
   border: none;
