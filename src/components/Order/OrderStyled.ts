@@ -6,9 +6,8 @@ type StyleProps = {
 
 type ActiveProps = {
   status?: any;
-isDisabled?:any;
+  isDisabled?: any;
 };
-
 
 export const CommonList = styled.ul`
   margin-bottom: 120px;
@@ -72,7 +71,7 @@ export const Title = styled.h2<ActiveProps>`
   font-size: 24px;
   line-height: 1.17;
 
-  color: ${props => props.status === "disabled" ? "#f4f1eb" : "#83888f"} ;
+  color: ${(props) => (props.status === "disabled" ? "#f4f1eb" : "#83888f")};
 
   @media (min-width: 768px) {
     width: auto;
@@ -106,6 +105,19 @@ export const OptionsItem = styled.li<ActiveProps>`
     padding-right: 26px;
   }
 
+  @media (min-width: 1440px) {
+    transition: all 0.3s linear;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: #fdd6ba;
+      color: #333d4b;
+      cursor: pointer;
+      transition: all 0.3s linear;
+    }
+  }
+
   &:not(:last-child) {
     margin-bottom: 16px;
 
@@ -113,6 +125,10 @@ export const OptionsItem = styled.li<ActiveProps>`
       margin-bottom: 0;
 
       margin-right: 10px;
+    }
+
+    @media (min-width: 1440px){
+        margin-right: 23px;
     }
   }
 `;
@@ -182,7 +198,12 @@ export const NavItemStyled = styled.li<ActiveProps>`
     font-size: 24px;
     line-height: 1.33;
 
-    color: ${props => props.status && props.isDisabled !== "disabled" ? "#333d4b" : props.isDisabled === "disabled" ? "#f4f1eb" : "#83888f"} ;
+    color: ${(props) =>
+      props.status && props.isDisabled !== "disabled"
+        ? "#333d4b"
+        : props.isDisabled === "disabled"
+        ? "#f4f1eb"
+        : "#83888f"};
   }
 
   & > p:first-of-type {
