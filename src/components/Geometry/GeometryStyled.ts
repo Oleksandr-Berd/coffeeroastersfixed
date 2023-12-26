@@ -5,6 +5,10 @@ export const GeometryCon = styled.div`
   position: relative;
 
   margin-bottom: 48px;
+
+  @media (min-width: 1440px){
+    margin-bottom: 67px;
+  }
 `;
 
 export const CirclesCon = styled.div`
@@ -26,6 +30,10 @@ export const Circle = styled.div<GeometryType>`
 
   &:not(:last-child) {
     margin-right: 202px;
+
+    @media (min-width: 1440px){
+        margin-right: 349px;
+    }
   }
 `;
 
@@ -40,4 +48,8 @@ export const Line = styled.div`
   height: 2px;
 
   background-color: #fdd6ba;
+
+  @media (min-width: 1440px){
+    width: 760px;
+  }
 `;

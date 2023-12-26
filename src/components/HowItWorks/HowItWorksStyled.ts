@@ -22,6 +22,17 @@ export const CommonCon = styled.div`
       margin-bottom: 44px;
     }
   }
+
+  @media (min-width: 1440px){
+    padding-left: calc(165px - 80px);
+    padding-right: calc(230px - 80px);
+
+    margin-bottom: 200px;
+
+    & > ul{
+        margin-bottom: 64px;
+    }
+  }
 `;
 
 export const Title = styled.h2`
@@ -36,6 +47,10 @@ export const Title = styled.h2`
   @media (min-width: 768px) {
     margin-bottom: 40px;
   }
+
+  @media (min-width: 1440px){
+    margin-bottom: 80px;
+  }
 `;
 
 export const Item = styled.li`
@@ -47,6 +62,12 @@ export const Item = styled.li`
     &:not(:last-child) {
       margin-bottom: 0;
       margin-right: 10px;
+    }
+  }
+
+  @media (min-width: 1440px){
+    &:not(:last-child){
+        margin-right: 95px;
     }
   }
 `;
@@ -61,6 +82,10 @@ export const Count = styled.h2`
 
   @media (min-width: 768px) {
     margin-bottom: 42px;
+  }
+
+  @media (min-width: 1440px){
+    margin-bottom: 38px;
   }
 `;
 
@@ -81,6 +106,13 @@ export const ItemTitle = styled.h3`
     font-size: 28px;
     line-height: 1.14;
   }
+
+  @media (min-width: 1440px){
+    margin-bottom: 42px;
+
+    font-size: 32px;
+    line-height: 1.13;
+  }
 `;
 
 export const Body = styled.p`
@@ -89,5 +121,12 @@ export const Body = styled.p`
   line-height: 1.67;
 
   color: #333d4b;
+
+  @media (min-width: 1440px){
+width: 270px;
+
+    font-size: 16px;
+    line-height: 1.63;
+  }
 `;
 
