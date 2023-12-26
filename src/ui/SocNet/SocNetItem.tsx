@@ -6,9 +6,10 @@ type Props ={
 }
 
 const SocNetItem:React.FC<Props> = ({icon, path}) => {
+    
     return ( <li>
         <NavLink to={path}>
-            <img src={icon} alt={path} />
+            <img src={icon} alt="icon" />
         </NavLink>
     </li> );
 }

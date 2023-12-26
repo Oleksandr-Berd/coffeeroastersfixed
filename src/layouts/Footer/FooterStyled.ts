@@ -21,4 +21,24 @@ background-color: #2c343e;
         margin-bottom: 65px;
     }
 }
+
+@media (min-width: 1440px){
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 47px;
+    padding-bottom: 47px;
+    padding-left: 85px;
+    padding-right: 85px;
+
+    & > *:first-of-type{
+        margin-bottom: 0;
+    }
+
+    & > *:nth-of-type(2){
+        margin-bottom: 0;
+    }
+}
 `
