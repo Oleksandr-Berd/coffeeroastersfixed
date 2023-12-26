@@ -21,6 +21,16 @@ export const CommonCon = styled.div`
       justify-content: space-between;
     }
   }
+
+  @media (min-width: 1440px) {
+    padding-left: calc(165px - 80px);
+
+    margin-bottom: 168px;
+
+    & > ul {
+      justify-content: flex-start;
+    }
+  }
 `;
 
 export const Title = styled.h2`
@@ -48,6 +58,12 @@ export const Item = styled.li<StyledProps>`
     }
   }
 
+  @media (min-width: 1440px){
+    &:not(:last-child){
+        margin-right: 231px;
+    }
+  }
+
   &::before {
     display: inline-block;
     content: url(${(props) => props.img});
@@ -56,6 +72,10 @@ export const Item = styled.li<StyledProps>`
 
     @media (min-width: 768px) {
       height: 50px;
+    }
+
+    @media (min-width: 1440px){
+        margin-bottom: 46px;
     }
   }
 
@@ -70,6 +90,13 @@ export const Item = styled.li<StyledProps>`
     @media (min-width: 768px) {
       font-size: 24px;
       line-height: 1.5;
+    }
+
+    @media (min-width: 1440px){
+        margin-bottom: 24px;
+
+        font-size: 32px;
+        line-height: 1.13;
     }
   }
 
@@ -86,6 +113,8 @@ export const Item = styled.li<StyledProps>`
     color: #333d4b;
 
     @media (min-width: 768px) {
+width: 120px;
+
       margin: 0;
     }
   }
