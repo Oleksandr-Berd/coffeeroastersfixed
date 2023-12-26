@@ -6,15 +6,18 @@ import { OrderProps, OrderQuestion } from "../../utils/types/types";
 import { setkeyName } from "../../utils/helpers";
 
 const OrderItem: React.FC<OrderProps> = ({
+    id,
   name,
   options,
   handleOrder,
   orderSummary,
+  handleOpen
 }) => {
   const [isOptions, setIsOptions] = useState<boolean>(false);
 
   const toggleOptions = (): void => {
     setIsOptions(!isOptions);
+    handleOpen(id)
   };
 
   const handleOption = (name: OrderQuestion, title: string) => {

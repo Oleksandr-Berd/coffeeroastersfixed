@@ -1,23 +1,71 @@
+import { useMediaQuery } from "usehooks-ts";
+
 import * as SC from "./OrderStyled";
 
-import { order } from "../../db/order";
+import { order, orderNav } from "../../db/order";
 import OrderItem from "./OrderItem";
 import { OrderQuestion, OrderSummary } from "../../utils/types/types";
+import NavItem from "./OrderDeskNavItem";
+import { useState } from "react";
 
 type Props = {
-    handleOrder:(name: OrderQuestion, title:string)=>void,
-  orderSummary: OrderSummary,
+  handleOrder: (name: OrderQuestion, title: string) => void;
+  orderSummary: OrderSummary;
+};
 
-}
+const Order: React.FC<Props> = ({ handleOrder, orderSummary }) => {
+  const [isOpen, setIsOpen] = useState<number[]>([]);
 
-const Order: React.FC<Props> = ({handleOrder, orderSummary}) => {
-    
+  const isDesktop = useMediaQuery("(min-width:1440px)");
+
+  const handleOpen = (id: number) => {
+    if (isOpen.includes(id)) {
+      setIsOpen(isOpen.filter((el) => el !== id));
+    } else {
+      setIsOpen((prev) => [...prev, id]);
+    }
+  };
+
+
   return (
-    <SC.CommonList>
-      {order.map(({ name, options, id }) => (
-        <OrderItem key={id} name={name} options={options} handleOrder={handleOrder} orderSummary={orderSummary}/>
-      ))}
-    </SC.CommonList>
+    <>
+      {isDesktop ? (
+        <SC.CommonCon>
+          <SC.NavList>
+            {orderNav.map(({ id, title }) => (
+              <NavItem key={id} id={id} title={title} isOpen={isOpen}/>
+            ))}
+          </SC.NavList>
+          <SC.CommonList>
+            {order.map(({ name, options, id }) => (
+              <OrderItem
+                key={id}
+                id={id}
+                name={name}
+                options={options}
+                handleOrder={handleOrder}
+                orderSummary={orderSummary}
+                handleOpen={handleOpen}
+              />
+            ))}
+          </SC.CommonList>
+        </SC.CommonCon>
+      ) : (
+        <SC.CommonList>
+          {order.map(({ name, options, id }) => (
+            <OrderItem
+              key={id}
+              id={id}
+              name={name}
+              options={options}
+              handleOrder={handleOrder}
+              orderSummary={orderSummary}
+              handleOpen={handleOpen}
+            />
+          ))}
+        </SC.CommonList>
+      )}
+    </>
   );
 };
 

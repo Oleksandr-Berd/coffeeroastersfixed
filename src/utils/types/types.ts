@@ -25,13 +25,15 @@ export type OrderQuestion =
   | "How often should we deliver?";
 
   export type OrderProps = {
+    id:number,
     name: any;
     options: {
       title: string;
       body: string;
     }[];
     handleOrder:(name: OrderQuestion, title:string)=>void,
-    orderSummary: OrderSummary
+    orderSummary: OrderSummary,
+    handleOpen:(id:number)=>void
   };
 
   export type GeometryType = {
