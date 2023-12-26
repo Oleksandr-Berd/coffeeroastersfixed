@@ -4,14 +4,16 @@ import * as SC from "./CommitmentStyled";
 
 import imgComMob from "../../assets/img/about/mobile/image-commitment.jpg";
 import imgComTab from '../../assets/img/about/tablet/image-commitment.jpg'
+import imgComDesk from '../../assets/img/about/desktop/image-commitment.jpg'
 
 const Commitment: React.FC = () => {
 
 const isTablet = useMediaQuery("(min-width:768px)")
+const isDesktop = useMediaQuery("(min-width:1440px)")
 
   return (
     <SC.CommonCon>
-      <img src={isTablet ? imgComTab : imgComMob} alt="commitment" />
+      <img src={isDesktop ? imgComDesk : isTablet ? imgComTab : imgComMob} alt="commitment" />
       <div>
       <SC.Title>Our commitment</SC.Title>
       <SC.Body>

@@ -23,6 +23,16 @@ export const CommonCon = styled.div`
     padding-right: 74px;
   }
 
+  @media (min-width: 1440px){
+    padding-top: 88px;
+    padding-bottom: 176px;
+    padding-left: 85px;
+
+    margin-bottom: 168px;
+
+    text-align: left;
+  }
+
   & > img {
     position: absolute;
 
@@ -36,11 +46,19 @@ export const CommonCon = styled.div`
 
     border-radius: 10px;
 
-    @media (min-width: 768px){
-transform: translateX(-57px) translateY(-160px);
+    @media (min-width: 768px) {
+      transform: translateX(-57px) translateY(-160px);
 
-        width: 573px;
-        height: 320px;
+      width: 573px;
+      height: 320px;
+    }
+
+    @media (min-width: 1440px){
+        transform: translateX(-85px) translateY(-88px);
+
+
+        width: 445px;
+        height: 474px;
     }
   }
 `;
@@ -52,9 +70,16 @@ export const Title = styled.h2`
   font-size: 28px;
   color: #fefcf7;
 
-  @media (min-width: 768px){
+  @media (min-width: 768px) {
     font-size: 32px;
     line-height: 1.5;
+  }
+
+  @media (min-width: 1440px){
+    margin-bottom: 32px;
+
+    font-size: 40px;
+    line-height: 1.2;
   }
 `;
 
@@ -69,8 +94,15 @@ export const Body = styled.p`
   line-height: 1.67;
   color: #fefcf7;
 
-  @media (min-width: 768px){
+  @media (min-width: 768px) {
     width: auto;
     margin: 0;
+  }
+
+  @media (min-width: 1440px){
+width: 500px;
+
+    font-size: 16px;
+    line-height: 1.63;
   }
 `;
