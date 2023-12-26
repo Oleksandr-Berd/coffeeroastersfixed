@@ -5,7 +5,7 @@ import CollectionList from "./CollectionList";
 const Collection: React.FC = () => {
   return (
     <SC.CommonCon>
-        <SC.Title>our collection</SC.Title>
+      <SC.Title>our collection</SC.Title>
       <CollectionList />
     </SC.CommonCon>
   );

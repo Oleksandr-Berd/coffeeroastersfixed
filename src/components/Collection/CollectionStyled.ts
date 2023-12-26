@@ -12,6 +12,17 @@ export const CommonCon = styled.div`
 
     text-align: left;
   }
+
+  @media (min-width: 1440px) {
+    & > ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      padding-left: calc(165px - 80px);
+      padding-right: calc(165px - 80px);
+    }
+  }
 `;
 
 export const Title = styled.h2`
@@ -35,10 +46,17 @@ export const Title = styled.h2`
     font-size: 116px;
     line-height: 1.33;
 
-  background: -webkit-linear-gradient(#83888f 30%, #fefcf7);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    background: -webkit-linear-gradient(#83888f 30%, #fefcf7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
+  @media (min-width: 1440px) {
+
+    transform: translateX(80px) translateY(-52%);
+
+    font-size: 190px;
+    line-height: 2.08;
   }
 `;
 
@@ -69,6 +87,19 @@ export const Item = styled.li`
       width: 260px;
     }
   }
+
+  @media (min-width: 1440px) {
+    display: block;
+
+    text-align: center;
+
+    padding: 0;
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+      margin-right: 30px;
+    }
+  }
 `;
 
 export const Image = styled.img`
@@ -79,6 +110,10 @@ export const Image = styled.img`
     height: 193px;
 
     margin-bottom: 0;
+  }
+
+  @media (min-width: 1440px) {
+    margin-bottom: 72px;
   }
 `;
 
@@ -102,4 +137,9 @@ export const Body = styled.p`
   line-height: 1.67;
 
   color: #333d4b;
+
+  @media (min-width: 1440px) {
+    font-size: 16px;
+    line-height: 1.63;
+  }
 `;
