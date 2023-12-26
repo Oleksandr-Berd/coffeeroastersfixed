@@ -4,13 +4,15 @@ import * as SC from './PlanHeroStyled'
 
 import bgMob from '../../assets/img/plan/mobile/image-hero-blackcup.jpg'
 import bgTab from '../../assets/img/plan/tablet/image-hero-blackcup.jpg'
+import bgDesk from '../../assets/img/plan/desktop/image-hero-blackcup.jpg'
 
 const PlanHero: React.FC = () => {
   
   const isTablet = useMediaQuery("(min-width:768px)")
+  const isDesktop = useMediaQuery("(min-width:1440px)")
 
     return (
-    <SC.CommonCon bg={isTablet ? bgTab : bgMob}>
+    <SC.CommonCon bg={isDesktop ?  bgDesk :isTablet ? bgTab : bgMob}>
       <SC.Title>Create a plan</SC.Title>
       <SC.Body>
         Build a subscription plan that best fits your needs. We offer an

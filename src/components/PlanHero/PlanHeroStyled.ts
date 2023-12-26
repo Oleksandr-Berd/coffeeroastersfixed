@@ -30,6 +30,14 @@ export const CommonCon = styled.div<StyleProps>`
 
     text-align: left;
   }
+
+  @media (min-width: 1440px) {
+    padding-top: 134px;
+    padding-bottom: 134px;
+    padding-left: 85px;
+
+    margin-bottom: 168px;
+  }
 `;
 
 export const Title = styled.h2`
@@ -43,10 +51,23 @@ export const Title = styled.h2`
 
     font-size: 48px;
   }
+
+  @media (min-width: 1440px) {
+    margin-bottom: 32px;
+
+    font-size: 72px;
+  }
 `;
 
 export const Body = styled.p`
   font-family: "Bar";
   font-size: 15px;
   line-height: 1.67;
+
+  @media (min-width: 1440px) {
+    width: 400px;
+
+    font-size: 16px;
+    line-height: 1.63;
+  }
 `;
