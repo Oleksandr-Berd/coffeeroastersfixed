@@ -29,6 +29,14 @@ export const HeroCon = styled.div<StyleProp>`
 
     text-align: left;
   }
+
+  @media (min-width: 1440px) {
+    padding-top: 117px;
+    padding-bottom: 116px;
+    padding-left: 85px;
+
+    margin-bottom: 262px;
+  }
 `;
 
 export const Title = styled.h1`
@@ -42,6 +50,14 @@ export const Title = styled.h1`
     width: 300px;
 
     font-size: 48px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 490px;
+
+    margin-bottom: 32px;
+
+    font-size: 72px;
   }
 `;
 
@@ -58,6 +74,15 @@ export const Body = styled.p`
     width: 360px;
 
     margin-bottom: 40px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 400px;
+
+    margin-bottom: 56px;
+
+    font-size: 16px;
+    line-height: 1.63;
   }
 `;
 

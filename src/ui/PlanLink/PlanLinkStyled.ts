@@ -18,5 +18,13 @@ background-color: #0e8784;
 
 border-radius: 6px;
 
+@media (min-width: 1440px){
+    transition: background-color 0.3s linear;
 
+    &:hover, &:focus, &:active{
+
+        background-color: #66d2cf;
+        transition: background-color 0.3s linear;
+    }
+}
 `
