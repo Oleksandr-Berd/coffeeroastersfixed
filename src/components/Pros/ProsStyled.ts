@@ -10,6 +10,10 @@ export const CommonCon = styled.div`
   @media (min-width: 768px) {
     margin-bottom: 434px;
   }
+
+  @media (min-width: 1440px){
+    margin-bottom: 351px;
+  }
 `;
 
 export const ContentWrapper = styled.div`
@@ -21,6 +25,10 @@ export const ContentWrapper = styled.div`
 
   @media (min-width: 768px) {
     height: 573px;
+  }
+
+  @media (min-width: 1440px){
+    height: 577px;
   }
 `;
 
@@ -41,6 +49,12 @@ export const TitleCon = styled.div`
 
     margin-bottom: 70px;
   }
+
+  @media (min-width: 1440px){
+    padding-top: 100px;
+
+    margin-bottom: 86px;
+  }
 `;
 
 export const Title = styled.h2`
@@ -52,6 +66,13 @@ export const Title = styled.h2`
   @media (min-width: 768px) {
     font-size: 32px;
     line-height: 1.5;
+  }
+
+  @media (min-width: 1440px){
+    margin-bottom: 32px;
+
+    font-size: 40px;
+    line-height: 1.2;
   }
 `;
 
@@ -66,6 +87,13 @@ export const Body = styled.p`
     margin-left: auto;
     margin-right: auto;
   }
+
+  @media (min-width: 1440px){
+width: 500px;
+
+    font-size: 16px;
+    line-height: 1.63;
+  }
 `;
 
 export const ProsList = styled.ul`
@@ -75,6 +103,15 @@ export const ProsList = styled.ul`
   @media (min-width: 768px) {
     padding-left: 57px;
     padding-right: 58px;
+  }
+
+  @media (min-width: 1440px){
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding-left: 85px;
+    padding-right: 85px;
   }
 `;
 
@@ -108,6 +145,22 @@ export const ProsItem = styled.li`
 
     text-align: left;
   }
+
+  @media (min-width: 1440px){
+    display: block;
+
+    padding-top: 72px;
+    padding-bottom: 48px;
+    padding-left: 47px;
+    padding-right: 48px;
+
+    text-align: center;
+
+    &:not(:last-child){
+        margin-bottom: 0;
+        margin-right: 30px;
+    }
+  }
 `;
 
 export const ProsItemImg = styled.img`
@@ -116,6 +169,11 @@ export const ProsItemImg = styled.img`
   @media (min-width: 768px) {
     margin-bottom: 0;
     margin-right: 55px;
+  }
+
+  @media (min-width: 1440px){
+    margin-bottom: 56px;
+    margin-right: 0;
   }
 `;
 
@@ -129,16 +187,25 @@ export const ProsItemTitle = styled.h3`
   @media (min-width: 768px){
     margin-bottom: 16px;
   }
+
+  @media (min-width: 1440px){
+    margin-bottom: 24px;
+  }
 `;
 
 export const ProsItemBody = styled.p`
-  max-width: 212px;
+  width: 212px;
 
   font-family: "Bar";
   font-size: 15px;
   line-height: 1.67;
 
   @media (min-width: 768px){
-    max-width: 100%;
+    width: 100%;
+  }
+
+  @media (min-width: 1440px){
+    font-size: 16px;
+    line-height: 1.63;
   }
 `;

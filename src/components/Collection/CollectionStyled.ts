@@ -14,6 +14,9 @@ export const CommonCon = styled.div`
   }
 
   @media (min-width: 1440px) {
+
+    margin-bottom: 200px;
+
     & > ul {
       display: flex;
       flex-direction: row;
