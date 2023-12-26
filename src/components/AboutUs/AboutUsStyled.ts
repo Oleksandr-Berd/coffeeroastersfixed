@@ -28,6 +28,14 @@ export const CommonCon = styled.div<StyledProps>`
 
     text-align: left;
   }
+  
+  @media (min-width: 1440px){
+    padding-top: 137px;
+    padding-bottom: 137px;
+    padding-left: 85px;
+    
+    margin-bottom: 168px;
+  }
 `;
 
 export const Title = styled.h2`
@@ -40,6 +48,12 @@ export const Title = styled.h2`
   @media (min-width: 768px) {
     font-size: 32px;
     line-height: 1.25;
+  }
+
+  @media (min-width: 1440px){
+    font-size: 40px;
+    line-height: 1.2;
+
   }
 `;
 
@@ -58,5 +72,11 @@ export const Body = styled.p`
     width: 380px;
 
     margin: 0;
+  }
+
+  @media (min-width: 1440px){
+    width: 400px;
+    font-size: 16px;
+    line-height: 1.63;
   }
 `;
