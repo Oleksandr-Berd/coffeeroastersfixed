@@ -5,8 +5,10 @@ type StyleProps = {
 };
 
 type ActiveProps = {
-  status: any;
+  status?: any;
+isDisabled?:any;
 };
+
 
 export const CommonList = styled.ul`
   margin-bottom: 120px;
@@ -63,14 +65,14 @@ export const ToggleBtn = styled.button`
   border: none;
 `;
 
-export const Title = styled.h2`
+export const Title = styled.h2<ActiveProps>`
   width: 200px;
 
   font-family: "Frau";
   font-size: 24px;
   line-height: 1.17;
 
-  color: #83888f;
+  color: ${props => props.status === "disabled" ? "#f4f1eb" : "#83888f"} ;
 
   @media (min-width: 768px) {
     width: auto;
@@ -180,7 +182,7 @@ export const NavItemStyled = styled.li<ActiveProps>`
     font-size: 24px;
     line-height: 1.33;
 
-    color: ${props => props.status ? "#333d4b" : "#83888f"} ;
+    color: ${props => props.status && props.isDisabled !== "disabled" ? "#333d4b" : props.isDisabled === "disabled" ? "#f4f1eb" : "#83888f"} ;
   }
 
   & > p:first-of-type {

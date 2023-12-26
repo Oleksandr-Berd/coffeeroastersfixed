@@ -43,7 +43,10 @@ const OrderItem: React.FC<OrderProps> = ({
   return (
     <SC.Item isOptions={isOptions} key={name}>
       <SC.TitleCon onClick={toggleOptions}>
-        <SC.Title>{name}</SC.Title>
+        <SC.Title status={ orderSummary.drinkWay === "Capsule" &&
+            setkeyName(name) === "grindWay"
+              ? "disabled"
+              : false}>{name}</SC.Title>
         <SC.ToggleBtn
           disabled={
             orderSummary.drinkWay === "Capsule" &&

@@ -33,7 +33,9 @@ const Order: React.FC<Props> = ({ handleOrder, orderSummary }) => {
         <SC.CommonCon>
           <SC.NavList>
             {orderNav.map(({ id, title }) => (
-              <NavItem key={id} id={id} title={title} isOpen={isOpen}/>
+              <NavItem key={id} id={id} title={title} isOpen={isOpen} status={orderSummary.drinkWay === "Capsule"
+                ? "disabled"
+                : false}/>
             ))}
           </SC.NavList>
           <SC.CommonList>

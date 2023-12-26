@@ -4,10 +4,10 @@ type Props = {
   id: number;
   title: string;
 isOpen:number[],
-
+status:any,
 };
 
-const NavItem: React.FC<Props> = ({ id, title, isOpen }) => {
+const NavItem: React.FC<Props> = ({ id, title, isOpen, status }) => {
 
 const countMorph = (id:number):string | number =>{
 
@@ -17,9 +17,8 @@ return count
 
 }
 
-
   return (
-    <SC.NavItemStyled status={isOpen.includes(id)}>
+    <SC.NavItemStyled status={isOpen.includes(id)} isDisabled={status === "disabled" && id === 4 ? "disabled" : null}>
       <p>{countMorph(id)}</p>
       <p>{title}</p>
     </SC.NavItemStyled>
