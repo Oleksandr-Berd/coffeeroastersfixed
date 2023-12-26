@@ -22,6 +22,10 @@ export const SummaryOverlay = styled.div`
     padding-top: 214px;
     padding-right: 114px;
   }
+
+  @media (min-width: 1440px){
+    height: 100%;
+  }
 `;
 
 export const OrderSummaryCon = styled.div`
