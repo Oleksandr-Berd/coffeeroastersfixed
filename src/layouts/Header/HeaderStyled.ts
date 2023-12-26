@@ -11,4 +11,8 @@ padding-bottom: 40px;
 @media (min-width: 768px){
     padding-bottom: 53px;
 }
+
+@media (min-width: 1440px){
+    padding-bottom: 44px;
+}
 `

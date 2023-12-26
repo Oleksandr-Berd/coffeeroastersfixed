@@ -17,10 +17,16 @@ export const SharedLayoutStyled = styled.main<StyleProps>`
   overflow: hidden;
 
   @media (min-width: 768px) {
-height: ${(props) => props.isMenu === "true" && "110vh"};
+    height: ${(props) => props.isMenu === "true" && "110vh"};
 
     padding-top: 40px;
     padding-left: 39px;
     padding-right: 40px;
+  }
+
+  @media (min-width: 1440px){
+    padding-top: 44px;
+    padding-left: 80px;
+    padding-right: 80px;
   }
 `;

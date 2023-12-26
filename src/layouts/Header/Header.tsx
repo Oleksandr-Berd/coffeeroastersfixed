@@ -13,7 +13,7 @@ const Header: React.FC<HeaderType> = ({ isMenu, toggleMenu }) => {
     <SC.HeaderStyled>
       <Logo location="header" />
       {isTablet ? (
-        <NavBar location="footer" />
+        <NavBar location="header" />
       ) : (
         <BurgerMenu toggleMenu={toggleMenu} isMenu={isMenu} />
       )}

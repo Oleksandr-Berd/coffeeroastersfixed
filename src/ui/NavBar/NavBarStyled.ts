@@ -20,21 +20,42 @@ export const NavBarStyled = styled.nav<LayoutType>`
     color: ${(props) => (props.location === "footer" ? "#83888f" : "#333d4b")};
   }
 
-  @media (min-width: 768px){
+  @media (min-width: 768px) {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 
-    & >li:not(:last-child) {
+    & > li:not(:last-child) {
       margin-bottom: 0;
       margin-right: 33px;
     }
 
-    & a{
+    & a {
+      text-transform: uppercase;
+
+      font-family: "Bar";
       font-size: 15px;
       line-height: 1.25;
       letter-spacing: 1px;
+      color:#83888f;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    & a {
+      font-size: 12px;
+
+      transition: color 0.3s linear;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: ${(props) =>
+          props.location === "header" ? "#333d4b" : "#fefcf7"};
+
+        transition: color 0.3s linear;
+      }
     }
   }
 `;
